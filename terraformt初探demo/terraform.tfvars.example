@@ -1,0 +1,26 @@
+# ============================================================
+# Example Terraform Variables File
+# ============================================================
+# Copy this file to terraform.tfvars and fill in your values
+# terraform.tfvars is gitignored for security reasons
+# ============================================================
+
+# General Settings
+project_name = "my-ec2-project"
+environment  = "dev"
+aws_region   = "ap-northeast-1"
+
+# VPC Settings
+vpc_cidr           = "10.0.0.0/16"
+public_subnet_cidr = "10.0.1.0/24"
+availability_zone  = "ap-northeast-1a"
+
+# EC2 Settings
+instance_type = "t2.micro"
+key_name      = "my-ec2-key"
+# ami_id      = ""  # Leave empty to use latest Amazon Linux 2023
+
+# Security Settings
+# IMPORTANT: Replace with your IP for production use!
+# Find your IP: curl ifconfig.me
+allowed_ssh_cidr = "0.0.0.0/0"  # Example: "203.0.113.50/32"
